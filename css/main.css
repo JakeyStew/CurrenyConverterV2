@@ -1,0 +1,53 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #333; }
+  .header .logo-left {
+    grid-column: 1; }
+  .header .nav-menu {
+    grid-column: 2; }
+    .header .nav-menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; }
+      .header .nav-menu ul li {
+        float: left; }
+      .header .nav-menu ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none; }
+      .header .nav-menu ul li a:hover {
+        background-color: #111; }
+  .header .basket-right {
+    grid-column: 3; }
+
+.body {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); }
+  .body .about {
+    background-image: url(../img/body/shopping.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh; }
+    .body .about p {
+      font-size: 4em;
+      text-align: center;
+      padding-top: 20vh;
+      color: white;
+      text-shadow: 2px 2px black; }
+  .body .catergories {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px; }
+    .body .catergories .catergorie-items {
+      display: grid; }
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); }

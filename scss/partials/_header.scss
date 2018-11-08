@@ -1,0 +1,40 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #333;
+
+    .logo-left {
+        grid-column: 1;
+    }
+    
+    .nav-menu {
+        grid-column: 2;
+    
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            
+            li {
+                float: left;
+            }
+    
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+    
+            li a:hover {
+                background-color: #111;
+            }
+        }
+    }
+    
+    .basket-right {
+        grid-column: 3;
+    }
+}
