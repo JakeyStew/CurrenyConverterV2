@@ -1,9 +1,15 @@
 .body {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "about about about"
+                         ". catergories ."
+                         "hero hero hero"
+                         ". items .";
 
     .about {
-        background-image: url(../img/body/shopping.jpg);
+        grid-area: about;
+        background-image: url(../img/body/food.jpg);
         background-position: center;
         background-size: cover;
         height: 80vh;
@@ -18,18 +24,79 @@
     }
 
     .catergories {
-        display:grid;
-        grid-template-columns: 200px 200px;
-        grid-row: auto auto;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        
-        .catergorie-items {
-            display: grid;
+        grid-area: catergories;
+        grid-template-columns: repeat(3, 1fr);
+
+        .wrapper {
+            display:grid;
+            grid-template-columns: 200px 200px;
+            grid-row: auto auto;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            
+            .catergorie-items {
+                display: grid;
+            }
         }
     }
 
-    .items {
+    .hero {
+        grid-area: hero;
+        background-image: url(../img/body/board.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
+    .items {
+        grid-area: items;
+
+        .grid-carousel {
+            grid-column: 1 / -1;
+            display: grid;
+            grid: auto-flow / 1em repeat(5, 1fr) 1em;
+            position: relative;
+
+            &_item {
+                @include applyOrder(5);
+            }
+
+            /*&_caption {
+                display: none;
+            }
+
+            &_item.featured &_caption {
+                display: block;
+            }*/
+
+            &__button {
+                all: unset;
+                &:last-of-type {
+                    order: 99;
+                }
+            }
+
+            &::before, 
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+
+            &::before {
+                grid-column: 2 / 4;
+                background: linear-gradient(to right, rgba(white, .9), rgba(white, .6));
+            }
+
+            &::after {
+                grid-column: -2 / -4;
+                background: linear-gradient(to left, rgba(white, .9), rgba(white, .6));
+            }
+        }
     }
 }
