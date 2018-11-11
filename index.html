@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-        <script src="main.js"></script>
     </head>
     <body>
         <nav>
@@ -17,40 +16,51 @@
                 <li><a href="/about/">Products</a></li>
                 <li><a href="/work/">Contact</a></li>
                 <div class="nav-basket">
-                    <img id="cart" src="img/header/shopping-cart.png" alt="Shopping Cart" height="40" width="40">
-                    <img id="currency" src="img/header/different-currencies.png" alt="Currency Exchange" height="40" width="40">
+                    <img src="img/header/shopping-cart.png" alt="Shopping Cart" height="40" width="40">
+                    <select id="dropdownVal" class="dropbtn">
+                            <option value="1">GBP</option>
+                            <option value="1">USD</option>
+                            <option value="1">EUR</option>
+                    </select> 
                 </div>
             </ul>
         </nav>
 
         <div class="body">
             <div class="about">
-                <p>Industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <div id="about-hero">
+                    <p>Boxxed - You Pick it, We ship it</p>
+                </div>
             </div>
             <div class="catergories">
+                <h1>Our featured products</h1>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <div class="wrapper">
                     <div class="item">
                         <div class="item-details">
                             Steaks
+                            <p class="price">10</p>
                         </div>
                     </div>
 
                     <div class="item">
                         <div class="item-details">
                             Chips
+                            <p class="price">10</p>
                         </div>
                     </div>
 
                     <div class="item">
                         <div class="item-details">
                             Rice
+                            <p class="price">10</p>
                         </div>
                     </div>
 
                     <div class="item">
                         <div class="item-details">
                             Cakes
+                            <p class="price">10</p>
                         </div>
                     </div>
                 </div>  
@@ -63,6 +73,7 @@
                 </div>
             </div>
             <div class="items">
+                <h1>Products</h1>
                     <p>ndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     <div class="grid-carousel">
                         <button class="grid-carousel__button js-left">
@@ -74,7 +85,7 @@
                             <img src="img/body/1.jpg" class="grid-carousel_image" height="150" width="150">
                             <figcaption class="grid-carousel_caption">
                                 <h2 class="grid-carousel_title">Cake</h2>
-                                <p class="grid-carousel_subtitle">£49.99</p>
+                                <p class="grid-carousel_subtitle price">£49.99</p>
                                 <p></p>
                             </figcaption>
                         </figure>
@@ -84,7 +95,7 @@
                             <img src="img/body/2.jpg" class="grid-carousel_image" height="150" width="150">
                             <figcaption class="grid-carousel_caption">
                                 <h2 class="grid-carousel_title">Choclate</h2>
-                                <p class="grid-carousel_subtitle">£39.99</p>
+                                <p class="grid-carousel_subtitle price">£39.99</p>
                                 <p></p>
                             </figcaption>
                         </figure>
@@ -94,7 +105,7 @@
                             <img src="img/body/3.jpg" class="grid-carousel_image" height="150" width="150">
                             <figcaption class="grid-carousel_caption">
                                 <h2 class="grid-carousel_title">Buns</h2>
-                                <p class="grid-carousel_subtitle">£29.99</p>
+                                <p class="grid-carousel_subtitle price">£29.99</p>
                                 <p></p>
                             </figcaption>
                         </figure>
@@ -104,7 +115,7 @@
                             <img src="img/body/4.jpg" class="grid-carousel_image" height="150" width="150">
                             <figcaption class="grid-carousel_caption">
                                 <h2 class="grid-carousel_title">Muffins</h2>
-                                <p class="grid-carousel_subtitle">£19.99</p>
+                                <p class="grid-carousel_subtitle price">£19.99</p>
                                 <p></p>
                             </figcaption>
                         </figure>
@@ -114,7 +125,7 @@
                         <img src="img/body/5.jpg" class="grid-carousel_image" height="150" width="150">
                         <figcaption class="grid-carousel_caption">
                             <h2 class="grid-carousel_title">Food</h2>
-                            <p class="grid-carousel_subtitle">£9.99</p>
+                            <p class="grid-carousel_subtitle price">£9.99</p>
                         </figcaption>
                     </figure>
                     <button class="grid-carousel__button js-right">
@@ -161,5 +172,6 @@
             </div>
         </div>
         <script src="carousel.js"></script>
+        <script src="currencyConverter.js"></script>
     </body>
 </html>
