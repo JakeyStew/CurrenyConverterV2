@@ -1,5 +1,35 @@
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'contact news social';
+    background-color: #3d414a;
+    justify-items: center;
+
+    .contact-left {
+        grid-area: contact;
+    }
+
+    .newsletter {
+        grid-area: news;
+    }
+
+    .social-right {
+        grid-area: social;
+    }
+}
+
+.copyright {
+    width: 100%;
+    position: absolute;
+    background: #333;
+
+    #copyright-left {
+        float: left;
+        margin-left: 11%;
+    }
+
+    #copyright-right {
+        float: right;
+        margin-right: 11%;
+    }
 }

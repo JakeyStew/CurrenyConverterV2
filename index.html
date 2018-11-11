@@ -10,40 +10,57 @@
         <script src="main.js"></script>
     </head>
     <body>
-        <div class="header">
-            <div class="logo-left">
-                <img src="img/logo/logo_transparent.png" alt="Boxxed Logo" height="50" width="50">
-            </div>
-            <div class="nav-menu">
-                <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Catergories</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-            <div class="basket-right">
-                <img src="img/header/basket.png" alt="Shopping Cart" height="50" width="50">
-                <img src="img/header/currency.png" alt="Currency Exchange" height="50" width="50">
-            </div>
-        </div>
+        <nav>
+            <ul class="nav">
+                <img class="logo-img" src="img/logo/logo.png" alt="Website logo">
+                <li><a href="/">About</a></li>
+                <li><a href="/about/">Products</a></li>
+                <li><a href="/work/">Contact</a></li>
+                <div class="nav-basket">
+                    <img id="cart" src="img/header/shopping-cart.png" alt="Shopping Cart" height="40" width="40">
+                    <img id="currency" src="img/header/different-currencies.png" alt="Currency Exchange" height="40" width="40">
+                </div>
+            </ul>
+        </nav>
 
         <div class="body">
             <div class="about">
                 <p>Industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             </div>
             <div class="catergories">
-                <h1>Featured Products</h1>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <div class="wrapper">
-                    <div class="catergorie-items">A</div>
-                    <div class="catergorie-items">B</div>
-                    <div class="catergorie-items">C</div>   
-                    <div class="catergorie-items">D</div>  
+                    <div class="item">
+                        <div class="item-details">
+                            Steaks
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-details">
+                            Chips
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-details">
+                            Rice
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-details">
+                            Cakes
+                        </div>
+                    </div>
                 </div>  
             </div>
             <div class="hero">
-                <h1>Discover</h1>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button btn">
+                <div class="wrapper-contents">
+                    <h1>Discover</h1>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button-btn">
+                </div>
             </div>
             <div class="items">
                     <p>ndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -134,8 +151,13 @@
                 <img src="img/footer/Linkedin.png" alt="Currency Exchange" height="50" width="50">
                 <img src="img/footer/Instagram.png" alt="Currency Exchange" height="50" width="50">
             </div>
-            <div class="copyright">
-                <p>Copyright &copy - Jake Stewart, 2018</p>
+        </div>
+        <div class="copyright">
+            <div id="copyright-left">
+                <p>Copyright &copy - Boxxed, 2018</p>
+            </div>
+            <div id="copyright-right">
+                <p>Website by Jake Stewart</p>
             </div>
         </div>
         <script src="carousel.js"></script>

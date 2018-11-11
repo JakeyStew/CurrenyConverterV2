@@ -1,6 +1,6 @@
 .body {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "about about about"
                          ". catergories ."
@@ -12,7 +12,7 @@
         background-image: url(../img/body/food.jpg);
         background-position: center;
         background-size: cover;
-        height: 80vh;
+        height: 100vh;
 
         p {
             font-size: 4em;
@@ -26,27 +26,109 @@
     .catergories {
         grid-area: catergories;
         grid-template-columns: repeat(3, 1fr);
+        align-content: center;
+        margin-bottom: 2.5%;
+        p {
+            font-size: 1.725em;
+            text-align: center;
+        }
 
         .wrapper {
-            display:grid;
-            grid-template-columns: 200px 200px;
-            grid-row: auto auto;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            grid-auto-rows: 500px;
+            grid-auto-flow: row dense;
             
-            .catergorie-items {
-                display: grid;
-            }
+            .item {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                box-sizing: border-box;
+                background: #0c9a9a;
+                color: #fff;
+                grid-column-start: auto;
+                grid-row-start: auto;
+                color: #fff;
+                background:  url(../img/body/steak.jpg);
+                background-size: cover;
+                background-position: center;
+                box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+                transition: transform 0.3s ease-in-out;
+                cursor: pointer;
+                counter-increment: item-counter;
+                
+                &:nth-of-type(2n) {
+                  background-image: url(../img/body/Chips.jpg);
+                }
+                
+                &:nth-of-type(3n) {
+                  background-image: url(../img/body/Rice.jpg);
+                }
+
+                &:nth-of-type(4n) {
+                    background-image: url(../img/body/Cake.jpg);
+                  }
+                
+                &:after {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  background-color: black;
+                  opacity: 0.3;
+                  transition: opacity 0.3s ease-in-out;
+                }
+                
+                &:hover {
+                  transform: scale(1.05);
+                  
+                  &:after {
+                    opacity: 0;
+                  }
+                }
+                
+                .item-details {
+                  position: relative;
+                  z-index: 1;
+                  padding: 15px;
+                  color: #444;
+                  background: #fff;
+                  text-transform: lowercase;
+                  letter-spacing: 1px;
+                  color: #828282;
+                  
+                  &:before {
+                    content: counter(item-counter);
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    padding-right: 0.5em;
+                    color: #444;
+                  }
+                }
+              }
         }
     }
 
     .hero {
         grid-area: hero;
+        height: 60vh;
         background-image: url(../img/body/board.jpg);
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
+
+        .wrapper-contents {
+            position: absolute;
+            bottom: 20%;
+            right: 1.275%;
+            background-color:rgba(#3d414a, 0.6);
+            color: white;
+            padding: 0px 20px 20px 20px;
+        }
     }
 
     .items {
@@ -61,14 +143,6 @@
             &_item {
                 @include applyOrder(5);
             }
-
-            /*&_caption {
-                display: none;
-            }
-
-            &_item.featured &_caption {
-                display: block;
-            }*/
 
             &__button {
                 all: unset;

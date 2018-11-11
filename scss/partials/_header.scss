@@ -1,40 +1,49 @@
-.header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #333;
+.nav {
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0 auto;
+    text-align:center;
+    overflow: hidden;
 
-    .logo-left {
-        grid-column: 1;
+    .logo-img {
+        margin-left: 5%;
+        margin: 0.2% 0 3px 5%; /* Top, Right, Bottom, Left*/
+        float: left;
+        position: relative;
+        height: auto;
+        width: auto;
+        max-height: 72px;
+        max-width: 250px;
+    }
+
+    li {
+        list-style-type: none;
+        padding: 0px;
+        display: inline;
     }
     
-    .nav-menu {
-        grid-column: 2;
-    
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            
-            li {
-                float: left;
-            }
-    
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-    
-            li a:hover {
-                background-color: #111;
-            }
+    a {
+        color: black;
+        font-size: 16px;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        line-height: 70px;
+        padding: 5px 15px;
+        opacity: 0.7;
+    }
+
+    .nav-basket {
+        margin: 0.2% 5% 0 0;
+        float: right;
+        position: relative;
+
+        #cart {
+            padding: 10px;
         }
-    }
-    
-    .basket-right {
-        grid-column: 3;
+
+        #currency {
+            padding: 10px;
+        }
     }
 }
