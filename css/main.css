@@ -290,7 +290,8 @@ html, body {
   background-color: #3d414a;
   justify-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #f2f2f2; }
+  color: #f2f2f2;
+  text-align: center; }
   .footer h1 {
     border-bottom: 1px solid #f2f2f2;
     padding-bottom: 5px; }
