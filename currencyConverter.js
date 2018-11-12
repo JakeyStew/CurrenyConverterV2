@@ -26,20 +26,20 @@ function currencyExchange(selfTarget) {
     if (text === "GBP") 
     {
         for(var i = 0; i < elements.length; i++) {
-            console.log(i);
-            elements[i].innerHTML = i / globalData['rates'].GBP;
-        }   
+            elements[i].innerHTML = globalData['rates'].GBP;
+            console.log(elements);
+        }  
     }
     else if (text === "USD")
     {
         for(var i = 0; i < elements.length; i++) {
-            elements[i].innerHTML = i * globalData['rates'].USD;
+            elements[i].innerHTML = globalData['rates'].USD;
         }   
     }
     else if (text === "EUR")
     {
         for(var i = 0; i < elements.length; i++) {
-            elements[i].innerHTML = i * globalData['rates'].EUR;
+            elements[i].innerHTML = globalData['rates'].EUR;
         }   
     }
 }

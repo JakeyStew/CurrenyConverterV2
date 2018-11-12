@@ -4,6 +4,13 @@
     grid-template-areas: 'contact news social';
     background-color: #3d414a;
     justify-items: center;
+    font-family: $ff-footer;
+    color: #f2f2f2;
+
+    h1 {
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 5px;
+    }
 
     .contact-left {
         grid-area: contact;
@@ -11,10 +18,39 @@
 
     .newsletter {
         grid-area: news;
+
+        .button-btn {
+            background-color: #f2f2f2;
+            border: none;
+            color: #000;
+            opacity: 0.6;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+
+            &:hover {
+                opacity: 1.0;
+            }
+        }
     }
 
     .social-right {
         grid-area: social;
+
+        .socials {
+            opacity: 0.6;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -22,6 +58,8 @@
     width: 100%;
     position: absolute;
     background: #333;
+    font-family: $ff-footer;
+    color: #d9d9d9;
 
     #copyright-left {
         float: left;
