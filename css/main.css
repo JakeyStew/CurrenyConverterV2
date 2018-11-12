@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body {
   margin: 0;
   width: 100%;
@@ -172,8 +171,6 @@ html, body {
           letter-spacing: 1px; }
           .body .catergories .wrapper .item .item-details .price {
             display: inline; }
-            .body .catergories .wrapper .item .item-details .price:before {
-              content: "£"; }
   .body .hero {
     grid-area: hero;
     height: 60vh;

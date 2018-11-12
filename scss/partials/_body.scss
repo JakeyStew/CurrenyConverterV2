@@ -119,10 +119,6 @@
 
                   .price {
                       display: inline;
-
-                      &:before {
-                          content: "£";
-                      }
                   }
                 }
               }
