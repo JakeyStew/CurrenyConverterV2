@@ -1,26 +1,30 @@
-// Database Structure 
-CREATE TABLE `newsletter_signups` (
- `id` int(11) NOT NULL AUTO_INCREMENT,
- `name` text NOT NULL,
- `email` text NOT NULL,
- PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1
-
 <?php
-
 $host="localhost";
 $username="root";
 $password="";
-$databasename="sample";
+$databasename="testdatabase";
 
-$connect=mysql_connect($host,$username,$password);
-$db=mysql_select_db($databasename);
+//Create Connection
+$connection = new mysqli('localhost', $username, $password, $databasename);
 
-if(isset($_POST['submit_form']))
-{
- $email=$_POST["email"];
- 
- mysql_query("insert into short_urls values('','$name','$email')");
- echo "Thank You For Joining Our Newsletter";
+//Check connection
+if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
+} else {
+    echo "Connected Successfully";
 }
+
+$email = $_POST['email'];
+$email = mysqli_real_escape_string($connection, $email);
+
+//Insert into database
+$sql = "INSERT INTO $databasename (email) VALUES ('".$email."')";
+
+if (mysqli_query($connection, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+}
+header('Location: ' . $_SERVER['HTTP_REFERER']);
+mysqli_close($connection);
 ?>
